@@ -51,11 +51,10 @@ function checkCardNumber() {
         }
 
         let divide = spNum / 10;
+        // console.log(divide)
+        let lastDigit = parseInt(divide.toString().slice(-1));
+        let finalN = 10-lastDigit;
 
-        let a = parseInt(totalnumber.toString().slice(-1));
-        let lastdigit = divide.toString().substr(parseInt(a));
-
-        let finalN = 10 - parseInt(lastdigit)
         if (finalN == parseInt(split.slice(-1))) {
             console.log( "Card is Valid")
         } else {
